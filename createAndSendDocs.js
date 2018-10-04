@@ -13,7 +13,7 @@ MongoClient.connect(url, options, (err, client) => {
 	}
 	const db = client.db('store');
 	const collection = db.collection('products');
-	let numDocs = 1000;
+	let numDocs = 100;
 	let data = getProductList(numDocs);
 	console.log(`Connected. Attempting to insert data (${numDocs} docs)`);
 	collection.insertMany(data, (err) => {

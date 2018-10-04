@@ -14,7 +14,6 @@ MongoClient.connect(url, options, (err, client)=>{
   const collection = db.collection('products');
 
   console.log(`Connected. Attempting add indexes to database collection`);
-  // const indexOne = [['kategory', 1]]; //orelevant index som inte gjorde någon skillnad
   const indexTwo = [['kategory', 1],[ 'price', -1]];
   const indexThree = {name: 1};
 
